@@ -1,0 +1,18 @@
+<launch>
+    <arg name="player_name" default="p_moliveira"/>
+    <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
+
+    <param name="model" value="$(arg model)"/>
+
+
+    <!-- Use a player_name namespace to get unique topic names, services, parameters, etc.-->
+    <group ns="$(arg player_name)">
+
+      <!-- turtlebot3_teleop_key already has its own built in velocity smoother -->
+      <node pkg="p_moliveira_bringup_tp" type="myteleop.py" name="myteleop"  output="screen">
+          <remap from="/cmd_vel" to="/$(arg player_name)/cmd_vel"/>
+      </node>
+
+    </group>
+
+</launch>

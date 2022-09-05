@@ -1,0 +1,16 @@
+<launch>
+    <!--Bloco 2: Criação de um world om gazebo.-->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+<!--                <arg name="world_name" value="$(find turtlebot3_gazebo)/worlds/turtlebot3_house.world"/>-->
+<!--                <arg name="world_name" value="$(find psr_fnr)/worlds/fnr.world"/>-->
+        <arg name="world_name" value="$(find th_description)/worlds/th_arena_1.world"/>
+<!--                <arg name="world_name" value="$(find th_description)/worlds/th_arena_2.world"/>-->
+<!--                <arg name="world_name" value="$(find th_description)/worlds/th_arena_3.world"/>-->
+        <arg name="paused" value="false"/>
+        <arg name="use_sim_time" value="true"/>
+        <arg name="gui" value="true"/>
+        <arg name="headless" value="false"/>
+        <arg name="debug" value="false"/>
+    </include>
+
+</launch>

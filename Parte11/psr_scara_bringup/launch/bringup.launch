@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="model" default="$(find psr_scara_description)/urdf/scara.urdf.xacro"/>
+  <param name="robot_description" command="xacro $(arg model)"/>
+  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+  <include file="$(find psr_scara_bringup)/launch/visualize.launch">
+  </include>
+
+</launch>

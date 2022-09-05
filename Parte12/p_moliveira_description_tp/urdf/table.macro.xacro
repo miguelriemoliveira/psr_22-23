@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<robot name="table_macro" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <!-- A leg macro, to be used bellow by the table macro.-->
+    <xacro:macro name="table_leg_macro" params="name parent *origin height leg_radius tabletop_thickness">
+        <link name="${name}_${parent}">
+            <visual>
+                <origin xyz="0.0 0.0 ${height/2-tabletop_thickness-0.001}" rpy="0 0 0" />
+                <geometry>
+                    <cylinder radius="${leg_radius}" length="${height-tabletop_thickness}" />
+                </geometry>
+                <material name="grey"/>
+            </visual>
+            <collision>
+                <origin xyz="0.0 0.0 ${height/2}" rpy="0 0 0" />
+                <geometry>
+                    <cylinder radius="${leg_radius}" length="${height-tabletop_thickness-0.001}" />
+                </geometry>
+            </collision>
+            <inertial>
+<!--                <mass value="1.0" />-->
+                <mass value="0.01" />
+                <origin xyz="0.0 0.0 ${height/2-tabletop_thickness-0.001}" rpy="0 0 0" />
+                <inertia ixx="0.1" ixy="0"  ixz="0"
+                         iyy="0.1" iyz="0"
+                         izz="0.01" />
+            </inertial>
+        </link>
+        <gazebo reference="${name}_${parent}">
+            <material>Gazebo/Grey</material>
+            <mu1>1000.0</mu1>
+            <mu2>1000.0</mu2>
+            <kp>10000000.0</kp>
+            <kd>1.0</kd>
+            <selfCollide>true</selfCollide>
+        </gazebo>
+
+        <joint name="${parent}_to_${name}" type="fixed">
+            <parent link="${parent}" />
+            <child link="${name}_${parent}" />
+            <xacro:insert_block name="origin"/>
+        </joint>
+    </xacro:macro>
+
+    <!-- Table macro, the one that is called from another file.-->
+    <xacro:macro name="table_macro" params="name parent *origin width lenght height
+                                            tabletop_thickness leg_radius">
+
+        <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+        <!-- table link-->
+        <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+        <link name="${name}"/>
+
+        <joint name="${parent}_to_${name}" type="fixed">
+            <parent link="${parent}"/>
+            <child link="${name}" />
+            <xacro:insert_block name="origin"/>
+        </joint>
+
+        <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+        <!-- tabletop link-->
+        <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+        <link name="tabletop_${name}">
+            <visual>
+                <origin xyz="0 0 ${-tabletop_thickness}" rpy="0 0 0"/>
+                <geometry>
+                    <box size="${width} ${lenght} ${tabletop_thickness}"/>
+                </geometry>
+                <material name="grey"/>
+            </visual>
+            <collision name="base_link_collision">
+                <origin xyz="0 0 ${-tabletop_thickness}" rpy="0 0 0"/>
+                <geometry>
+                    <box size="${width} ${lenght} ${tabletop_thickness}"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass value="0.01" />
+                <origin xyz="0 0 ${-tabletop_thickness}" rpy="0 0 0"/>
+                <inertia ixx="1" ixy="0"  ixz="0" iyy="1" iyz="0" izz="1" />
+            </inertial>
+        </link>
+
+        <gazebo reference="tabletop_${name}">
+            <material>Gazebo/Grey</material>
+            <mu1>50.0</mu1>
+            <mu2>50.0</mu2>
+            <kp>1000000.0</kp>
+            <kd>1.0</kd>
+            <selfCollide>false</selfCollide>
+        </gazebo>
+
+         <joint name="${name}_to_tabletop_${name}" type="fixed">
+            <parent link="${name}"/>
+            <child link="tabletop_${name}" />
+            <origin xyz="0 0 ${height}" rpy="0 0 0"/>
+        </joint>
+
+        <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+        <!-- Define the four legs -->
+        <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+        <xacro:table_leg_macro name="leg1" parent="${name}" height="${height}" leg_radius="${leg_radius}" tabletop_thickness="${tabletop_thickness}">
+            <origin xyz="${-width/2+leg_radius} ${lenght/2-leg_radius} 0" rpy="0 0 0"/>
+        </xacro:table_leg_macro>
+
+        <xacro:table_leg_macro name="leg2" parent="${name}" height="${height}" leg_radius="${leg_radius}" tabletop_thickness="${tabletop_thickness}">
+            <origin xyz="${width/2-leg_radius} ${lenght/2-leg_radius} 0" rpy="0 0 0"/>
+        </xacro:table_leg_macro>
+
+        <xacro:table_leg_macro name="leg3" parent="${name}" height="${height}" leg_radius="${leg_radius}" tabletop_thickness="${tabletop_thickness}">
+            <origin xyz="${width/2-leg_radius} ${-lenght/2+leg_radius} 0" rpy="0 0 0"/>
+        </xacro:table_leg_macro>
+
+        <xacro:table_leg_macro name="leg4" parent="${name}" height="${height}" leg_radius="${leg_radius}" tabletop_thickness="${tabletop_thickness}">
+            <origin xyz="${-width/2+leg_radius} ${-lenght/2+leg_radius} 0" rpy="0 0 0"/>
+        </xacro:table_leg_macro>
+
+    </xacro:macro>
+</robot>

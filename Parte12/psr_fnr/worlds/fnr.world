@@ -1,0 +1,2340 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <model name='fnr2015_map'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>29.9 22</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>29.9 22</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://FNR2015_map/materials/scripts</uri>
+              <uri>model://FNR2015_map/materials/textures</uri>
+              <name>FNR2015/Image</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='tft_1'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <gravity>0</gravity>
+        <visual name='visual'>
+          <geometry>
+            <plane>
+              <normal>0 0 0</normal>
+              <size>0.4 0.3</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://FNR/materials/scripts</uri>
+              <uri>model://FNR/materials/textures</uri>
+              <name>FNR/TFT/Stop</name>
+            </script>
+          </material>
+          <plugin name='visualChange' filename='libvisualChange.so'/>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='monitor'>
+        <pose frame=''>0 0 -0.015 0 -0 0</pose>
+        <gravity>0</gravity>
+        <visual name='monitor'>
+          <geometry>
+            <mesh>
+              <uri>model://tft/monitor.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.2 -1.9 0.9 1.57 0 -1.57</pose>
+    </model>
+    <model name='tft_1'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <gravity>0</gravity>
+        <visual name='visual'>
+          <geometry>
+            <plane>
+              <normal>0 0 0</normal>
+              <size>0.4 0.3</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://FNR/materials/scripts</uri>
+              <uri>model://FNR/materials/textures</uri>
+              <name>FNR/TFT/Stop</name>
+            </script>
+          </material>
+          <plugin name='visualChange' filename='libvisualChange.so'/>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='monitor'>
+        <pose frame=''>0 0 -0.015 0 -0 0</pose>
+        <gravity>0</gravity>
+        <visual name='monitor'>
+          <geometry>
+            <mesh>
+              <uri>model://tft/monitor.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.2 -1.9 0.9 1.57 0 -1.57</pose>
+    </model>
+    <model name='tft_2'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <gravity>0</gravity>
+        <visual name='visual'>
+          <geometry>
+            <plane>
+              <normal>0 0 0</normal>
+              <size>0.4 0.3</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://FNR/materials/scripts</uri>
+              <uri>model://FNR/materials/textures</uri>
+              <name>FNR/TFT/Stop</name>
+            </script>
+          </material>
+          <plugin name='visualChange' filename='libvisualChange.so'/>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='monitor'>
+        <pose frame=''>0 0 -0.015 0 -0 0</pose>
+        <gravity>0</gravity>
+        <visual name='monitor'>
+          <geometry>
+            <mesh>
+              <uri>model://tft/monitor.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.2 -1.1 0.9 1.57 -0 1.57</pose>
+    </model>
+    <model name='tft_2'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <gravity>0</gravity>
+        <visual name='visual'>
+          <geometry>
+            <plane>
+              <normal>0 0 0</normal>
+              <size>0.4 0.3</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://FNR/materials/scripts</uri>
+              <uri>model://FNR/materials/textures</uri>
+              <name>FNR/TFT/Stop</name>
+            </script>
+          </material>
+          <plugin name='visualChange' filename='libvisualChange.so'/>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='monitor'>
+        <pose frame=''>0 0 -0.015 0 -0 0</pose>
+        <gravity>0</gravity>
+        <visual name='monitor'>
+          <geometry>
+            <mesh>
+              <uri>model://tft/monitor.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.2 -1.1 0.9 1.57 -0 1.57</pose>
+    </model>
+    <light name='point_light' type='point'>
+      <pose frame=''>0 -1.9 0.9 0 -0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>2</range>
+        <linear>0.2</linear>
+        <constant>0.8</constant>
+        <quadratic>0.01</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>0 0 -1</direction>
+    </light>
+    <plugin name='WorldManager' filename='libworldManager.so'/>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='obstacle'>
+      <pose frame=''>4.18433 -1.99594 0 0 -0 0</pose>
+      <link name='main_link'>
+        <pose frame=''>0 0 0.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.6 0.6 0.3</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.6 0.6 0.3</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='obstacle_0'>
+      <pose frame=''>-3.83972 -1.30895 0 0 -0 0</pose>
+      <link name='main_link'>
+        <pose frame=''>0 0 0.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.6 0.6 0.3</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.6 0.6 0.3</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <state world_name='default'>
+      <sim_time>803 687000000</sim_time>
+      <real_time>209 667833952</real_time>
+      <wall_time>1608025110 184935893</wall_time>
+      <iterations>195122</iterations>
+      <model name='Cattle_signal'>
+        <pose frame=''>-2.10214 1.20701 0.025001 -1e-06 -4e-06 -0.005391</pose>
+        <scale>1 1 1</scale>
+        <link name='pictogram'>
+          <pose frame=''>-2.10227 1.18451 0.775001 -1e-06 -4e-06 -0.005391</pose>
+          <velocity>0.000939 0.000772 -6e-05 -0.000998 0.001217 -4.9e-05</velocity>
+          <acceleration>0.072912 -0.031063 -9.07795 0.068822 0.081436 -0.001046</acceleration>
+          <wrench>0.072912 -0.031063 -9.07795 0 -0 0</wrench>
+        </link>
+        <link name='support_structure'>
+          <pose frame=''>-2.10214 1.20701 0.025001 -1e-06 -4e-06 -0.005391</pose>
+          <velocity>2.5e-05 1.7e-05 -8.3e-05 -0.000995 0.001218 -5.2e-05</velocity>
+          <acceleration>-0.004111 -0.001548 -9.07661 0.069041 0.081717 -0.00258</acceleration>
+          <wrench>-0.004111 -0.001548 -9.07661 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Crosswalk_signal'>
+        <pose frame=''>-3.28796 -2.52305 0.025 1e-06 -6e-06 -1.51906</pose>
+        <scale>1 1 1</scale>
+        <link name='pictogram'>
+          <pose frame=''>-3.31043 -2.52421 0.775 1e-06 -6e-06 -1.51906</pose>
+          <velocity>-0.000908 -0.000514 -0.000535 0.00066 -0.001186 9.1e-05</velocity>
+          <acceleration>0.001439 0.000147 -9.80033 -0.000168 0.002676 -0.003418</acceleration>
+          <wrench>0.001439 0.000147 -9.80033 0 -0 0</wrench>
+        </link>
+        <link name='support_structure'>
+          <pose frame=''>-3.28796 -2.52305 0.025 1e-06 -6e-06 -1.51906</pose>
+          <velocity>-1.7e-05 -1.8e-05 -0.000507 0.00066 -0.001185 9.3e-05</velocity>
+          <acceleration>-0.001439 -0.000147 -9.79967 0.000278 -0.003748 0.003419</acceleration>
+          <wrench>-0.001439 -0.000147 -9.79967 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Depression_signal_clone'>
+        <pose frame=''>-7.05326 0.544101 0.024992 1e-06 -6e-06 0.008284</pose>
+        <scale>1 1 1</scale>
+        <link name='pictogram'>
+          <pose frame=''>-7.05308 0.521601 0.774992 1e-06 -6e-06 0.008284</pose>
+          <velocity>-0.001635 -0.000527 -0.008867 0.000673 -0.002111 2e-06</velocity>
+          <acceleration>-0.000238 0.007545 -9.80158 -0.009787 -0.000275 -0.00441</acceleration>
+          <wrench>-0.000238 0.007545 -9.80158 0 -0 0</wrench>
+        </link>
+        <link name='support_structure'>
+          <pose frame=''>-7.05326 0.544101 0.024992 1e-06 -6e-06 0.008284</pose>
+          <velocity>-5.2e-05 -2.4e-05 -0.008852 0.000678 -0.00211 8e-06</velocity>
+          <acceleration>0.000238 -0.007545 -9.79842 0.015411 0.000454 0.004414</acceleration>
+          <wrench>0.000238 -0.007545 -9.79842 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Depression_signal_clone_0'>
+        <pose frame=''>-8.09854 0.533721 0.025001 0 -5e-06 0.008223</pose>
+        <scale>1 1 1</scale>
+        <link name='pictogram'>
+          <pose frame=''>-8.09836 0.511221 0.775001 0 -5e-06 0.008223</pose>
+          <velocity>0.000849 0.000811 0.008997 -0.001079 0.001119 -3.7e-05</velocity>
+          <acceleration>2.49022 1.46832 17.8876 1.22206 -0.090953 3.13337</acceleration>
+          <wrench>2.49022 1.46832 17.8876 0 -0 0</wrench>
+        </link>
+        <link name='support_structure'>
+          <pose frame=''>-8.09854 0.533721 0.025001 0 -5e-06 0.008223</pose>
+          <velocity>3.2e-05 2e-05 0.008977 -0.001076 0.00112 -4.2e-05</velocity>
+          <acceleration>0.085344 0.051042 17.8494 1.22042 -0.09189 3.12385</acceleration>
+          <wrench>0.085344 0.051042 17.8494 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Depression_signal_clone_1'>
+        <pose frame=''>-8.08892 0.941461 0.025002 2e-06 -9e-06 3.07428</pose>
+        <scale>1 1 1</scale>
+        <link name='pictogram'>
+          <pose frame=''>-8.0874 0.963911 0.775001 2e-06 -9e-06 3.07428</pose>
+          <velocity>0.000643 0.001132 0.000364 -0.001461 0.00083 -1e-06</velocity>
+          <acceleration>-0.954501 -0.472141 0.341983 0.610189 -1.23217 -0.004934</acceleration>
+          <wrench>-0.954501 -0.472141 0.341983 0 -0 0</wrench>
+        </link>
+        <link name='support_structure'>
+          <pose frame=''>-8.08892 0.941461 0.025002 2e-06 -9e-06 3.07428</pose>
+          <velocity>2.1e-05 3.7e-05 0.000399 -0.001461 0.00083 -1e-06</velocity>
+          <acceleration>-0.03048 -0.014523 0.326418 0.610191 -1.23218 -0.004928</acceleration>
+          <wrench>-0.03048 -0.014523 0.326418 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Depression_signal_clone_1_clone'>
+        <pose frame=''>-7.03239 0.896384 0.025001 0 -4e-06 3.07431</pose>
+        <scale>1 1 1</scale>
+        <link name='pictogram'>
+          <pose frame=''>-7.03087 0.918833 0.775001 0 -4e-06 3.07431</pose>
+          <velocity>0.001683 0.000528 0.000911 -0.000682 0.002171 1.6e-05</velocity>
+          <acceleration>-1.01249 0.221223 1.51328 -0.289383 -1.31153 -0.023749</acceleration>
+          <wrench>-1.01249 0.221223 1.51328 0 -0 0</wrench>
+        </link>
+        <link name='support_structure'>
+          <pose frame=''>-7.03239 0.896384 0.025001 0 -4e-06 3.07431</pose>
+          <velocity>5.4e-05 1.5e-05 0.000927 -0.000667 0.002171 1.2e-05</velocity>
+          <acceleration>-0.029393 -0.001714 1.51555 -0.27215 -1.31237 -0.0301</acceleration>
+          <wrench>-0.029393 -0.001714 1.51555 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Hospital_signal'>
+        <pose frame=''>2.44668 2.21261 0.025 -1e-06 -1e-06 2.56945</pose>
+        <scale>1 1 1</scale>
+        <link name='pictogram'>
+          <pose frame=''>2.45886 2.23153 0.775 -1e-06 -1e-06 2.56945</pose>
+          <velocity>-0.001591 0.000884 -0.000171 -0.001139 -0.002061 -3.7e-05</velocity>
+          <acceleration>-0.396278 1.03605 0.087485 -1.34113 -0.519058 -0.006356</acceleration>
+          <wrench>-0.396278 1.03605 0.087485 0 -0 0</wrench>
+        </link>
+        <link name='support_structure'>
+          <pose frame=''>2.44668 2.21261 0.025 -1e-06 -1e-06 2.56945</pose>
+          <velocity>-4.6e-05 3.1e-05 -0.000175 -0.001141 -0.00206 -3.5e-05</velocity>
+          <acceleration>-0.007099 0.030095 0.106465 -1.34072 -0.519313 -0.002014</acceleration>
+          <wrench>-0.007099 0.030095 0.106465 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Lights_signal'>
+        <pose frame=''>4.95348 -0.44052 0.025 0 -0 -1.58222</pose>
+        <scale>1 1 1</scale>
+        <link name='pictogram'>
+          <pose frame=''>4.93098 -0.440263 0.775 0 -0 -1.58222</pose>
+          <velocity>-0.00015 0.000435 -8e-06 -0.00056 -0.000197 -2e-05</velocity>
+          <acceleration>-0.312801 0.873745 -0.012709 -1.12645 -0.409813 0.005178</acceleration>
+          <wrench>-0.312801 0.873745 -0.012709 0 -0 0</wrench>
+        </link>
+        <link name='support_structure'>
+          <pose frame=''>4.95348 -0.44052 0.025 0 -0 -1.58222</pose>
+          <velocity>-3e-06 1.4e-05 -4e-06 -0.000557 -0.000188 -2e-05</velocity>
+          <acceleration>-0.004888 0.028611 -0.003263 -1.12173 -0.391074 0.005421</acceleration>
+          <wrench>-0.004888 0.028611 -0.003263 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Other_Dangers_signal'>
+        <pose frame=''>8.25083 2.20481 0.025 -1e-06 2e-06 0.000152</pose>
+        <scale>1 1 1</scale>
+        <link name='pictogram'>
+          <pose frame=''>8.25083 2.18231 0.775 -1e-06 2e-06 0.000152</pose>
+          <velocity>-0.001802 0.000141 -0.000333 -0.000183 -0.002329 4.7e-05</velocity>
+          <acceleration>-0.865882 -0.63371 -0.27268 0.815543 -1.11827 0.007432</acceleration>
+          <wrench>-0.865882 -0.63371 -0.27268 0 -0 0</wrench>
+        </link>
+        <link name='support_structure'>
+          <pose frame=''>8.25083 2.20481 0.025 -1e-06 2e-06 0.000152</pose>
+          <velocity>-5.4e-05 -2e-06 -0.000337 -0.000181 -0.002329 4.4e-05</velocity>
+          <acceleration>-0.02779 -0.020627 -0.254405 0.814907 -1.11825 0.001665</acceleration>
+          <wrench>-0.02779 -0.020627 -0.254405 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Park_signal'>
+        <pose frame=''>3.08832 -3.35935 0.025 -1e-06 2e-06 -1.58978</pose>
+        <scale>1 1 1</scale>
+        <link name='pictogram'>
+          <pose frame=''>3.06582 -3.35892 0.775 -1e-06 2e-06 -1.58978</pose>
+          <velocity>-0.000536 -0.002662 -0.000602 0.003434 -0.000695 -9e-06</velocity>
+          <acceleration>-0.600299 -0.787721 -1.00487 1.01815 -0.771994 -0.001806</acceleration>
+          <wrench>-0.600299 -0.787721 -1.00487 0 -0 0</wrench>
+        </link>
+        <link name='support_structure'>
+          <pose frame=''>3.08832 -3.35935 0.025 -1e-06 2e-06 -1.58978</pose>
+          <velocity>-1.9e-05 -8.5e-05 -0.000589 0.003434 -0.000697 -1.1e-05</velocity>
+          <acceleration>-0.02024 -0.024804 -0.98781 1.01819 -0.771499 -0.006324</acceleration>
+          <wrench>-0.02024 -0.024804 -0.98781 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RMV_Signal'>
+        <pose frame=''>4.14757 0.522879 0.025001 0 5e-06 1e-06</pose>
+        <scale>1 1 1</scale>
+        <link name='pictogram'>
+          <pose frame=''>4.14757 0.500379 0.775001 0 5e-06 1e-06</pose>
+          <velocity>-0.000879 0.00074 0.009099 -0.000954 -0.001134 6e-06</velocity>
+          <acceleration>-2.5303 1.47281 18.065 1.24243 0.122968 -3.13102</acceleration>
+          <wrench>-2.5303 1.47281 18.065 0 -0 0</wrench>
+        </link>
+        <link name='support_structure'>
+          <pose frame=''>4.14757 0.522879 0.025001 0 5e-06 1e-06</pose>
+          <velocity>-2.9e-05 2.2e-05 0.009078 -0.000951 -0.001135 9e-06</velocity>
+          <acceleration>-0.082285 0.049037 18.0221 1.2417 0.122958 -3.12441</acceleration>
+          <wrench>-0.082285 0.049037 18.0221 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Road_Narrow_signal'>
+        <pose frame=''>-7.4633 3.18525 0.025001 0 -5e-06 -0.691787</pose>
+        <scale>1 1 1</scale>
+        <link name='pictogram'>
+          <pose frame=''>-7.47766 3.16792 0.775001 0 -5e-06 -0.691787</pose>
+          <velocity>0.001137 -4e-06 0.009102 3e-06 0.00147 -2.2e-05</velocity>
+          <acceleration>2.88994 -0.481096 18.0649 -2.52213 -0.583257 3.1312</acceleration>
+          <wrench>2.88994 -0.481096 18.0649 0 -0 0</wrench>
+        </link>
+        <link name='support_structure'>
+          <pose frame=''>-7.4633 3.18525 0.025001 0 -5e-06 -0.691787</pose>
+          <velocity>3.6e-05 -5e-06 0.00908 5e-06 0.001468 -2.5e-05</velocity>
+          <acceleration>0.096492 -0.016108 18.0222 -2.5227 -0.583712 3.12458</acceleration>
+          <wrench>0.096492 -0.016108 18.0222 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='fnr2015_map'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='obstacle'>
+        <pose frame=''>4.15816 -1.92568 -0.35 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='main_link'>
+          <pose frame=''>4.15816 -1.92568 0.15 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>5e-06 5e-06 1e-05 -3.2e-05 3.3e-05 1e-06</acceleration>
+          <wrench>5e-06 5e-06 1e-05 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='obstacle_0'>
+        <pose frame=''>-4.00894 -1.05837 -0.35 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='main_link'>
+          <pose frame=''>-4.00894 -1.05837 0.15 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>5e-06 5e-06 1e-05 -3.2e-05 3.3e-05 1e-06</acceleration>
+          <wrench>5e-06 5e-06 1e-05 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='obstacle_0_clone'>
+        <pose frame=''>-1.83157 -1.91548 -0.35 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='main_link'>
+          <pose frame=''>-1.83157 -1.91548 0.15 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-5e-06 -5e-06 1e-05 3.2e-05 -3.3e-05 1e-06</acceleration>
+          <wrench>-5e-06 -5e-06 1e-05 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='obstacle_0_clone_0'>
+        <pose frame=''>-2.80573 1.31607 -0.35 0 -0 0.195261</pose>
+        <scale>1 1 1</scale>
+        <link name='main_link'>
+          <pose frame=''>-2.80573 1.31607 0.15 0 -0 0.195261</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0 5e-06 -1e-05 -3.3e-05 -1e-06 0</acceleration>
+          <wrench>-0 5e-06 -1e-05 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='obstacle_clone'>
+        <pose frame=''>6.36915 3.09344 -0.35 0 -0 1.10932</pose>
+        <scale>1 1 1</scale>
+        <link name='main_link'>
+          <pose frame=''>6.36915 3.09344 0.15 0 -0 1.10932</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>1.1e-05 5e-06 5e-06 -3.5e-05 7.5e-05 0</acceleration>
+          <wrench>1.1e-05 5e-06 5e-06 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tft_1'>
+        <pose frame=''>0.2 -1.9 0.9 1.57 0 -1.57</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.2 -1.9 0.9 1.57 0 -1.57</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='monitor'>
+          <pose frame=''>0.215 -1.89999 0.899988 1.57 0 -1.57</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tft_2'>
+        <pose frame=''>0.2 -1.1 0.9 1.57 -0 1.57</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.2 -1.1 0.9 1.57 -0 1.57</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='monitor'>
+          <pose frame=''>0.185 -1.09999 0.899988 1.57 -0 1.57</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='point_light'>
+        <pose frame=''>0 -1.9 0.9 0 -0 0</pose>
+      </light>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <model name='Cattle_signal'>
+      <link name='support_structure'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='postAndPictogram' type='revolute'>
+        <parent>support_structure</parent>
+        <child>pictogram</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <upper>0</upper>
+            <lower>0</lower>
+          </limit>
+          <use_parent_model_frame>1</use_parent_model_frame>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='pictogram'>
+        <pose frame=''>0 -0.0225 0.75 0 -0 0</pose>
+        <visual name='pictogram'>
+          <geometry>
+            <mesh>
+              <uri>model://CattleSignal/signal.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CattleSignal/materials/scripts</uri>
+              <uri>model://CattleSignal/materials/textures</uri>
+              <name>Signal/Cattle</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-2.10215 1.20772 0 0 -0 0</pose>
+    </model>
+    <model name='Other_Dangers_signal'>
+      <link name='support_structure'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='postAndPictogram' type='revolute'>
+        <parent>support_structure</parent>
+        <child>pictogram</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <upper>0</upper>
+            <lower>0</lower>
+          </limit>
+          <use_parent_model_frame>1</use_parent_model_frame>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='pictogram'>
+        <pose frame=''>0 -0.0225 0.75 0 -0 0</pose>
+        <visual name='pictogram'>
+          <geometry>
+            <mesh>
+              <uri>model://OtherDangersSignal/signal.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://OtherDangersSignal/materials/scripts</uri>
+              <uri>model://OtherDangersSignal/materials/textures</uri>
+              <name>Signal/OtherDangers</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>8.25083 2.20627 0 0 -0 0</pose>
+    </model>
+    <model name='Road_Narrow_signal'>
+      <link name='support_structure'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='postAndPictogram' type='revolute'>
+        <parent>support_structure</parent>
+        <child>pictogram</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <upper>0</upper>
+            <lower>0</lower>
+          </limit>
+          <use_parent_model_frame>1</use_parent_model_frame>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='pictogram'>
+        <pose frame=''>0 -0.0225 0.75 0 -0 0</pose>
+        <visual name='pictogram'>
+          <geometry>
+            <mesh>
+              <uri>model://RoadNarrowSignal/signal.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://RoadNarrowSignal/materials/scripts</uri>
+              <uri>model://RoadNarrowSignal/materials/textures</uri>
+              <name>Signal/RoadNarrow</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-7.54525 3.25498 0 0 -0 0</pose>
+    </model>
+    <model name='Crosswalk_signal'>
+      <link name='support_structure'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='postAndPictogram' type='revolute'>
+        <parent>support_structure</parent>
+        <child>pictogram</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <upper>0</upper>
+            <lower>0</lower>
+          </limit>
+          <use_parent_model_frame>1</use_parent_model_frame>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='pictogram'>
+        <pose frame=''>0 -0.0225 0.75 0 -0 0</pose>
+        <visual name='pictogram'>
+          <geometry>
+            <mesh>
+              <uri>model://CrosswalkSignal/signal.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CrosswalkSignal/materials/scripts</uri>
+              <uri>model://CrosswalkSignal/materials/textures</uri>
+              <name>Signal/Crosswalk</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-3.28842 -2.52398 0 0 -0 0</pose>
+    </model>
+    <model name='Hospital_signal'>
+      <link name='support_structure'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='postAndPictogram' type='revolute'>
+        <parent>support_structure</parent>
+        <child>pictogram</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <upper>0</upper>
+            <lower>0</lower>
+          </limit>
+          <use_parent_model_frame>1</use_parent_model_frame>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='pictogram'>
+        <pose frame=''>0 -0.0225 0.75 0 -0 0</pose>
+        <visual name='pictogram'>
+          <geometry>
+            <mesh>
+              <uri>model://HospitalSignal/signal.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://HospitalSignal/materials/scripts</uri>
+              <uri>model://HospitalSignal/materials/textures</uri>
+              <name>Signal/Hospital</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>2.4461 2.21163 0 0 -0 0</pose>
+    </model>
+    <model name='Park_signal'>
+      <link name='support_structure'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='postAndPictogram' type='revolute'>
+        <parent>support_structure</parent>
+        <child>pictogram</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <upper>0</upper>
+            <lower>0</lower>
+          </limit>
+          <use_parent_model_frame>1</use_parent_model_frame>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='pictogram'>
+        <pose frame=''>0 -0.0225 0.75 0 -0 0</pose>
+        <visual name='pictogram'>
+          <geometry>
+            <mesh>
+              <uri>model://ParkSignal/signal.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://ParkSignal/materials/scripts</uri>
+              <uri>model://ParkSignal/materials/textures</uri>
+              <name>Signal/Park</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>3.08961 -3.35937 0 0 -0 0</pose>
+    </model>
+    <model name='RMV_Signal'>
+      <link name='support_structure'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='postAndPictogram' type='revolute'>
+        <parent>support_structure</parent>
+        <child>pictogram</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <upper>0</upper>
+            <lower>0</lower>
+          </limit>
+          <use_parent_model_frame>1</use_parent_model_frame>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='pictogram'>
+        <pose frame=''>0 -0.0225 0.75 0 -0 0</pose>
+        <visual name='pictogram'>
+          <geometry>
+            <mesh>
+              <uri>model://RMVSignal/signal.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://RMVSignal/materials/scripts</uri>
+              <uri>model://RMVSignal/materials/textures</uri>
+              <name>Signal/RMV</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>4.14757 0.524052 0 0 -0 0</pose>
+    </model>
+    <model name='Lights_signal'>
+      <link name='support_structure'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='postAndPictogram' type='revolute'>
+        <parent>support_structure</parent>
+        <child>pictogram</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <upper>0</upper>
+            <lower>0</lower>
+          </limit>
+          <use_parent_model_frame>1</use_parent_model_frame>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='pictogram'>
+        <pose frame=''>0 -0.0225 0.75 0 -0 0</pose>
+        <visual name='pictogram'>
+          <geometry>
+            <mesh>
+              <uri>model://LightsSignal/signal.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://LightsSignal/materials/scripts</uri>
+              <uri>model://LightsSignal/materials/textures</uri>
+              <name>Signal/Lights</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>4.954 -0.440511 0 0 -0 0</pose>
+    </model>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>-5.76711 10.5132 13.6339 0 0.8691 -1.23924</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <model name='obstacle_clone'>
+      <pose frame=''>6.36915 3.09344 -0.35 0 -0 0</pose>
+      <link name='main_link'>
+        <pose frame=''>0 0 0.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.6 0.6 0.3</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.6 0.6 0.3</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='obstacle_0_clone'>
+      <pose frame=''>-1.83157 -1.91548 -0.35 0 -0 0</pose>
+      <link name='main_link'>
+        <pose frame=''>0 0 0.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.6 0.6 0.3</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.6 0.6 0.3</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='obstacle_0_clone_0'>
+      <pose frame=''>-2.95589 1.79184 -0.35 0 -0 0</pose>
+      <link name='main_link'>
+        <pose frame=''>0 0 0.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.6 0.6 0.3</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.6 0.6 0.3</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='Depression_signal_clone'>
+      <link name='support_structure'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='postAndPictogram' type='revolute'>
+        <parent>support_structure</parent>
+        <child>pictogram</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <upper>0</upper>
+            <lower>0</lower>
+          </limit>
+          <use_parent_model_frame>1</use_parent_model_frame>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='pictogram'>
+        <pose frame=''>0 -0.0225 0.75 0 -0 0</pose>
+        <visual name='pictogram'>
+          <geometry>
+            <mesh>
+              <uri>model://DepressionSignal/signal.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://DepressionSignal/materials/scripts</uri>
+              <uri>model://DepressionSignal/materials/textures</uri>
+              <name>Signal/Depression</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-7.05326 0.544255 0.025 1e-06 -5e-06 0.008243</pose>
+    </model>
+    <model name='Depression_signal_clone_0'>
+      <link name='support_structure'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='postAndPictogram' type='revolute'>
+        <parent>support_structure</parent>
+        <child>pictogram</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <upper>0</upper>
+            <lower>0</lower>
+          </limit>
+          <use_parent_model_frame>1</use_parent_model_frame>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='pictogram'>
+        <pose frame=''>0 -0.0225 0.75 0 -0 0</pose>
+        <visual name='pictogram'>
+          <geometry>
+            <mesh>
+              <uri>model://DepressionSignal/signal.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://DepressionSignal/materials/scripts</uri>
+              <uri>model://DepressionSignal/materials/textures</uri>
+              <name>Signal/Depression</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-8.09854 0.533799 0.025 1e-06 -5e-06 0.008243</pose>
+    </model>
+    <model name='Depression_signal_clone_1'>
+      <link name='support_structure'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='postAndPictogram' type='revolute'>
+        <parent>support_structure</parent>
+        <child>pictogram</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <upper>0</upper>
+            <lower>0</lower>
+          </limit>
+          <use_parent_model_frame>1</use_parent_model_frame>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='pictogram'>
+        <pose frame=''>0 -0.0225 0.75 0 -0 0</pose>
+        <visual name='pictogram'>
+          <geometry>
+            <mesh>
+              <uri>model://DepressionSignal/signal.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://DepressionSignal/materials/scripts</uri>
+              <uri>model://DepressionSignal/materials/textures</uri>
+              <name>Signal/Depression</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-8.08892 0.941449 0.025 1e-06 -5e-06 0.008243</pose>
+    </model>
+    <model name='Depression_signal_clone_1_clone'>
+      <link name='support_structure'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='base'>
+          <geometry>
+            <box>
+              <size>0.305 0.2 0.05</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='vertical_post'>
+          <pose frame=''>0 0 0.385 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.0305 0.0305 0.82</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='postAndPictogram' type='revolute'>
+        <parent>support_structure</parent>
+        <child>pictogram</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <upper>0</upper>
+            <lower>0</lower>
+          </limit>
+          <use_parent_model_frame>1</use_parent_model_frame>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='pictogram'>
+        <pose frame=''>0 -0.0225 0.75 0 -0 0</pose>
+        <visual name='pictogram'>
+          <geometry>
+            <mesh>
+              <uri>model://DepressionSignal/signal.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://DepressionSignal/materials/scripts</uri>
+              <uri>model://DepressionSignal/materials/textures</uri>
+              <name>Signal/Depression</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-7.03239 0.896364 0.025 2e-06 2e-06 3.07429</pose>
+    </model>
+  </world>
+</sdf>

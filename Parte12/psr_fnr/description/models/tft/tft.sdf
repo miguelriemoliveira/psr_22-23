@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+<model name="tft">
+  <static>true</static>
+  <link name="link">
+    <pose>0 0 0 0 0 0</pose>
+    <gravity>0</gravity>
+    <visual name="visual">
+      <geometry>
+        <plane>
+          <normal> 0 0 0 </normal>
+          <size>0.4 0.3</size>
+        </plane>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://FNR/materials/scripts</uri>
+          <uri>model://FNR/materials/textures</uri>            
+          <name>FNR/TFT/Stop</name>
+        </script>
+      </material>
+    <plugin name="visualChange" filename="libvisualChange.so"/>
+    </visual>
+  </link>
+  <link name="monitor">
+    <pose>0 0 -0.015 0 0 0</pose>
+    <gravity>0</gravity>
+    <visual name="monitor">
+      <geometry>
+        <mesh>
+            <uri>model://tft/monitor.dae</uri>
+        </mesh>
+      </geometry>
+    </visual>
+  </link>
+
+</model>
+</sdf>

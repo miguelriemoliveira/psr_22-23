@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<robot name="properties" xmlns:xacro="http://ros.org/wiki/xacro">
+    <!--Read common properties from turtlebot3 and then add missing stuff-->
+    <xacro:include filename="$(find turtlebot3_description)/urdf/common_properties.xacro"/>
+
+    <material name="Yellow">
+        <color rgba="1.0 1.0 0.0 1.0"/>
+    </material>
+
+    <material name="Orange">
+        <color rgba="1.0 0.4 0.0 1.0"/>
+    </material>
+
+    <material name="sarascolor">
+        <color rgba="0.2 0.5 0.8 1.0"/>
+    </material>
+
+    <!--    Team hunt player colors-->
+    <material name="Red">
+    <color rgba="1.0 0.0 0.0 1.0"/>
+    </material>
+
+    <material name="Green">
+    <color rgba="0.0 1.0 0.0 1.0"/>
+    </material>
+
+    <material name="Blue">
+    <color rgba="0.0 0.0 1.0 1.0"/>
+    </material>
+</robot>
