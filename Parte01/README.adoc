@@ -1,0 +1,221 @@
+Parte 1 - PSR
+=============
+Miguel Riem Oliveira <mriem@ua.pt>
+2021-2022
+
+// Instruções especiais para o asciidoc usar icons no output
+:icons: html5
+:iconsdir: /etc/asciidoc/images/icons 
+
+.Sumário
+-----------------------------------------------
+Introdução
+    Apresentação
+    Objetivos
+    Avaliação
+Introdução ao Linux - O terminal
+Editores e IDEs
+Programas elementares em python
+-----------------------------------------------
+
+
+===================================================
+.Pressupostos para a realização dos exercícios
+- Ter o Linux instalado (ubuntu 20.04 *altamente recomendado*).
+- Instalação do Linux em modo dual boot (*altamente recomendado*).
+- Ter o acesso de rede configurado (_wireless_).
+*   Consultar as instruções do site dos 
+http://www.ua.pt/stic/PageText.aspx?id=15224[sTIC].
+===================================================
+
+
+Instalação do Ubuntu
+--------------------
+Existem diversas formas de usar o Ubuntu para quem tem outros sistemas
+operativos (Windows, MacOS). As mais interessantes são:
+
+  . Uso do live ubuntu: https://tutorials.ubuntu.com/tutorial/try-ubuntu-before-you-install[Try before you install]
+  . Instalar uma máquina virtual (`virtualbox` ou outra) e instalar o Linux na máquina virtual.
+  . Instalar o Linux em dual-boot com o Windows (**Esta é a forma recomendada. As outras formas serão pouco adequadas em breve**).
+
+As duas primeiras soluções não interferem no disco nem no sistema operativo
+existente, mas são mais limitadas em termos de funcionalidades e desempenho.
+No caso da primeira, todo o trabalho que for feito se perde no fim da sessão
+se não for copiado para outro local.
+No caso da máquina virtual, vai ser preciso espaço em disco no ambinente Windows
+(ou MacOs) para criar a "imagem" do disco onde correrá o Linux em máquina
+virtual. É uma solução intermédia que funciona relativamente bem, mas como opera
+sobre o sistema operativo nativo, pode ter limitações de desempenho e ficará
+dependente da atividade desse sistema operativo (como as atualizações no
+Windows).
+
+A terceira solução (dual-boot com o sistema operativo nativo) é a mais poderosa
+porque cada sistema operativo fica no seu próprio espaço e correm separadamente.
+Porém, é preciso repartir o disco que estaria todo atribuído ao sistema
+operativo nativo. O Linux oferece esta possibilidade durante a instalação e em
+geral o processo corre bem, mas há sempre o risco de perda de informação.
+Por isso, recomenda-se guardar toda a informação importante desenvolvida no
+sistema operativo original antes de fazer esta forma de instalação.
+
+Mais informações podem ser obtidas por exemplo nos seguintes endereços:
+
+  * https://tutorials.ubuntu.com/
+  * https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop
+
+Apresentação e generalidades
+----------------------------
+
+Ver slides de apresentação da UC.
+
+Introdução ao Linux e a Shell
+-----------------------------
+
+Ver o documento  `1-Linux-Breve Introdução`.
+
+
+Criação do ambiente e instalação de ferramentas básicas
+-------------------------------------------------------
+
+Metodologia
+~~~~~~~~~~~
+Para melhor se desenvolver o trabalho nas aulas, deve-se
+seguir uma metodologia de organização de ficheiros em diretórios
+por aulas e por exercícios.
+
+Dentro de cada aula, em especial nas primeiras, é também recomendado criar uma
+subpasta para cada exercício `Ex1`, `Ex2`, etc. Em certas aulas, ou aulas mais
+avançadas, os diversos exercícios serão feitos por acréscimo sucessivo sobre o código
+base dos exercícios anteriores; nessa altura serão dadas as instruções nesse
+sentido.
+
+Os guiões para as aulas estarão a ser continuamente atualizados em:
+
+https://github.com/miguelriemoliveira/psr_21-22
+
+Recomenda-se que, sempre que possível, usem a versão online ou façam o update.
+
+Editor
+~~~~~~
+A ferramenta principal para criar e modificar ficheiros é o editor, muitas
+vezes integrado num ambiente de desenvolvimento (IDE). Há inúmeras opções
+desde simples editores (`gedit`, `kate`, `kwrite`, etc.) até ambientes de
+desenvolvimento muito sofisticados (`codeblocks`, `eclipse`, `vscode`,`pycharm` etc.).
+
+Além das propriedades fundamentais dos editores, hoje em dia são excelentes
+_add-ons_ a "automated completion" (preenchimento automático de palavras
+e estruturas) , o "syntax highlight" (realce da sintaxe da linguagem),
+o "intellissense" (apresentação de todas as opções de preenchimento
+automático de campos e estruturas em variáveis, funções, etc.), ou a
+inserção automática de fragmentos de código padrão ("code snippets").
+
+O editor com mais tradição por excelência é o "vim" (ou "vi" improuved)
+mas a sua utilização eficaz pode requerer anos de prática continuada e
+permite todas as facilidades indicadas acima, mas a sua configuração,
+por ser praticamente ilimitada, pode-se tornar complexa e, por isso,
+contraproducente em utilizadores iniciados.
+
+===================================================
+**Recomenda-se como IDE** o https://www.jetbrains.com/pycharm/[pycharm]. Pode-se utilizar a licença profissional ou a licença base. Os estudantes podem solicitar acesso à https://www.jetbrains.com/community/education/#students[licença profissional].
+===================================================
+
+Outra alternativa uma solução disponibilizada
+pela Microsoft para muitas plataformas, incluindo linux. Trata-se do 'Visual Studio Code' ou 'vscode'.
+Pode ser instalado diretamente do gestor de aplicações do Ubuntu ('Ubuntu
+Software') ou por outras vias (https://askubuntu.com/questions/616075/how-do-i-install-visual-studio-code).
+
+Primeiros exercícios de programação em Python
+---------------------------------------------
+
+Exercício 1
+~~~~~~~~~~~
+
+Desenvolver um programa que imprima no terminal a frase "Hello World".
+Editar o ficheiro `hello.py` com o editor escolhido (`gedit`, `kate`, etc.)
+
+.hello.py
+[source,Python]
+----------------------------
+def main():
+    print("Hello World!")
+
+if __name__ == "__main__":
+    main()
+----------------------------
+
+executar o programa com o seguinte comando:
+
+    python ex1.py
+
+Exercício 2
+~~~~~~~~~~~
+Criar um programa designado `primos` que imprime no ecran 
+números primos, um por linha, até um certo limite.
+Usar uma função auxiliar `isPrime()`
+que aceita um inteiro `n` e retorna 1 ou 0 conforme `n`
+for primo ou não.
+
+.primo.py
+[source,Python]
+----------------------------------
+maximum_number = 50
+
+
+def isPrime(value):
+    # <Fill the blank>
+
+def main():
+    print("Starting to compute prime numbers up to " + str(maximum_number))
+
+    for i in range(0, maximum_number):
+        if isPrime(i):
+            print('Number ' + str(i) + ' is prime.')
+        else:
+            print('Number ' + str(i) + ' is not prime.')
+
+if __name__ == "__main__":
+    main()
+----------------------------------
+
+Com a ajuda do programa, calcular quantos números primos 
+inferiores a 10000 têm o algarismo 3.
+
+    python primos.py | grep "3" | wc -l
+
+A resposta deve ser 561
+
+Exercício 3
+~~~~~~~~~~~
+Estender o exercício 2 de modo a:
+
+    . Imprimir todos os divisores calculados para os números não primos;
+    . Usar o package colorama para imprimir os números primos a verde;
+    . Usar _shebang line_ para simplificar execução do script;
+
+Exercício 4
+~~~~~~~~~~~
+Calcular números perfeitos (aqueles cuja soma dos divisores igualam o número)
+como por exemplo 6 = 3 + 2 + 1.
+Além do `main()` criar a função `isPerfect()`, que indica se o número é perfeito.
+
+.perfeitos.py
+[source,Python]
+----------------------------------
+maximum_number = 100
+
+def isPerfect(value):
+    # <Fill the blanks>
+    return False
+
+def main():
+    print("Starting to compute perfect numbers up to " + str(maximum_number))
+
+    for i in range(0, maximum_number):
+        if isPerfect(i):
+            print('Number ' + str(i) + ' is perfect.')
+
+
+if __name__ == "__main__":
+    main()
+----------------------------------
+
+// vim: set syntax=asciidoc:

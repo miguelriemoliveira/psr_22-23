@@ -1,0 +1,40 @@
+# Programação de Sistemas Robóticos
+
+Miguel Riem Oliveira
+
+**Universidade de Aveiro**
+
+**2021-2022**
+
+//image::docs/intro_image.png[]
+
+
+[cols="^.^,^.^,^.^", options="header"]
+|===
+| | |
+
+|image:docs/VideosLAR1.gif[] https://github.com/lardemua/atlascar2[Projeto AtlasCar]
+|image:docs/MVI_3502.gif[]   https://www.project-race.eu/[Projecto RACE]
+|image:docs/iros2014_final_mpeg4.gif[] https://www.iros2020.org/[IROS 2014]
+
+|image:docs/set_initial_estimate.gif[] https://github.com/lardemua/atlascar2[AtlasCar2]
+|image:docs/join_hand_base_optimization.gif[] https://github.com/lardemua/atom[ATOM]
+|image:docs/mov10.gif[] https://www.iros2020.org/[FNR 2011]
+
+|image:docs/collect_data_agrob.gif[] https://www.researchgate.net/publication/335773466_Parallelization_of_a_Vine_Trunk_Detection_Algorithm_For_a_Real_Time_Robot_Localization_System/figures?lo=1[AgrobV2]
+|image:docs/SEV_final_rt.gif[] https://github.com/miguelriemoliveira/RustBot[Projecto SEV]
+|image:docs/PR2ObjectPerception.gif[] https://www.project-race.eu/[Projecto RACE]
+
+|image:docs/final_edited.gif[] https://github.com/lardemua/SmObEx[SmObEx]
+|image:docs/jarvis_lab_scene01-scene02-ex2.gif[] https://criis.inesctec.pt/index.php/criis-projects/stamina/[Projeto Stamina]
+|image:docs/OptimizationWithRViz.gif[] https://github.com/lardemua/atom[ATOM]
+|===
+
+Toda a documentação referente às aulas estará colocada neste repositório. Não obstante, deve também ver consultar periodicamente a https://elearning.ua.pt/course/view.php?id=36292[página de elearning] da UC.
+Pode entrar em cada uma das pastas para ver os guiões. Utilize sempre a visualização
+do _README.adoc_ para se assegurar que está a visualizar a versão mais recente do documento.
+
+Link para as sessões zoom das aulas está no elearning.
+
+Miguel Riem Oliveira
+
