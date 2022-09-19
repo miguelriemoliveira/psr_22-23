@@ -1,4 +1,0 @@
-<launch>
-    <!-- Launch rviz, loading configuration file -->
-    <node name="rviz" pkg="rviz" type="rviz" args="--display-config $(find p_moliveira_bringup_tp)/config/visualize.rviz" required="false"/>
-</launch>
