@@ -1,7 +1,7 @@
 Parte 1 - PSR
 =============
 Miguel Riem Oliveira <mriem@ua.pt>
-2021-2022
+2022-2023
 
 // Instruções especiais para o asciidoc usar icons no output
 :icons: html5
