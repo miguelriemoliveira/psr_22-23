@@ -115,13 +115,10 @@ por ser praticamente ilimitada, pode-se tornar complexa e, por isso,
 contraproducente em utilizadores iniciados.
 
 ===================================================
-**Recomenda-se como IDE** o https://www.jetbrains.com/pycharm/[pycharm]. Pode-se utilizar a licença profissional ou a licença base. Os estudantes podem solicitar acesso à https://www.jetbrains.com/community/education/#students[licença profissional].
-===================================================
-
-Outra alternativa uma solução disponibilizada
-pela Microsoft para muitas plataformas, incluindo linux. Trata-se do 'Visual Studio Code' ou 'vscode'.
+**Recomenda-se como IDE** o https://code.visualstudio.com/[visual studio code], que é gratuito.
 Pode ser instalado diretamente do gestor de aplicações do Ubuntu ('Ubuntu
 Software') ou por outras vias (https://askubuntu.com/questions/616075/how-do-i-install-visual-studio-code).
+===================================================
 
 Primeiros exercícios de programação em Python
 ---------------------------------------------
