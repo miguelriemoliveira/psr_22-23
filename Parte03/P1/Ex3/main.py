@@ -19,8 +19,8 @@ class Dog(Animal):
         print('Congratulations ' + self.name + ' Here is a Bone for you!!!')
         self.age += 1
 
-    def __str__(self):
-        text = 'I am a dog called ' + Fore.BLUE + self.name + Style.RESET_ALL + ' ' + str(self.age) + ' years old. Auaauau!'
+    def __str__(self, prefix=''):
+        text = prefix + 'I am a dog called ' + Fore.BLUE + self.name + Style.RESET_ALL + ' ' + str(self.age) + ' years old. Auaauau!'
         return text
 
 class Person(Animal):
@@ -67,17 +67,20 @@ def main():
     p2 = Person(name='Maria', age=34, civil_state='Single')
     c1 = Dog(name='Lassie', age=3)
 
-    print(p1)
-    print(p2)
-    p1.congratulations()
+#     print(p1)
+#     print(p2)
+#     p1.congratulations()
+# 
+#     p1.marry(p2)
+#     print(p1)
+#     print(p2)
 
-    p1.marry(p2)
-    print(p1)
-    print(p2)
-
-    print(c1)
-    c1.congratulations()
-    print(c1)
+    print(c1.__str__(prefix='Primeira chamada \n'))
+    print(c1.__str__(prefix='Outra tentativa\n'))
+    print(c1.__str__())
+    print(c1.__str__())
+    # c1.congratulations()
+    # print(c1)
 
 if __name__ == "__main__":
     main()
