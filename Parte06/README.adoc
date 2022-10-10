@@ -1,0 +1,104 @@
+= Parte 6 - PSR
+
+Miguel Riem Oliveira <mriem@ua.pt>
+2021-2022
+
+// Instruções especiais para o asciidoc usar icons no output
+:icons: html5
+:iconsdir: /etc/asciidoc/images/icons
+
+.Sumário
+-------------------------------------------------------------
+Continuação do OpenCV.
+-------------------------------------------------------------
+
+
+Exercício 1 - Anotações em imagens
+----------------------------------
+
+Por vezes é importante desenhar informação em cima de uma imagem, seja texto, figuras ou outros gráficos. O opencv disponibiliza várias funções para o efeito.
+
+1 a)
+~~~~
+
+Carregue a imagem atlascar.png e desenhe um círculo no seu centro com a função _cv2.circle_.
+
+1 b)
+~~~~
+
+Adicione o texto 'PSR' à imagem a vermelho usando a funçao _cv2.putText()_
+
+1 c)
+~~~~
+
+Crie um programa parecido com o paint. O programa deve ter um callback que recolhe a posição do rato e quando o botão esquerdo for pressionado o programa desenha pixeis de uma certa cor no ecrã.
+O ecrã deve ser uma imagem de 600x400 inicializada toda branca.
+
+O programa deve ainda deve escutar as teclas:
+
+    ... tecla _r_, para mudar a cor a desenhar para vermelho
+    ... tecla _g_, para mudar a cor a desenhar para verde
+    ... tecla _b_, para mudar a cor a desenhar para azul
+
+Exercício 2 - Aquisição de video
+--------------------------------
+
+O opencv também tem várias funções para lidar com vídeo. Ver https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_gui/py_video_display/py_video_display.html[estes tutoriais].
+
+[WARNING]
+====================
+Naturalmente só conseguirá ter acesso às imagens de uma câmara se o seu portátil tiver alguma com os drivers corretamente instalados. Normalmente a utilização de máquinas virtuais não permite a utilização de câmara. Pode também inserir uma câmara USB e tentar visualizá-la. Pode usar o software cheese para tentar primeiro perceber se a https://smallbusiness.chron.com/webcam-working-ubuntu-66873.html[câmara está a funcionar corretamente].
+====================
+
+2 a)
+~~~~
+Implemente um programa que faça a aquisição de uma imagem da câmara e depois faça o seu display.
+
+[source,Python]
+-----------------------------------------------------------------
+#!/usr/bin/env python
+import cv2
+
+def main():
+    # initial setup
+    capture = cv2.VideoCapture(0)
+    window_name = 'A5-Ex2'
+    cv2.namedWindow(window_name,cv2.WINDOW_AUTOSIZE)
+
+    _, image = capture.read()  # get an image from the camera
+
+    # add code to show acquired image
+    # add code to wait for a key press
+
+if __name__ == '__main__':
+    main()
+-----------------------------------------------------------------
+
+2 b)
+~~~~
+Adapte o exercício anterior de modo a implementar um programa que faça a aquisição e display contínuos da imagem da câmara do seu portátil.
+
+Exercício 3 - Are you speaking?
+------------------------------
+
+Este exercício pretende que seja desenvolvido um programa mais complexo.
+
+3 a)
+~~~~
+
+Pretende-se desenvolver uma aplicação em python opencv que seja capaz de detetar
+caras num stream de video. A face detetada deve ser destacada na imagem mostrada, ficando mais esverdeada.
+
+3 b)
+~~~~
+
+Nas regiões da imagem que não estão incluídas pela cara detetada, pretende-se detetar arestas e destacá-las avermelhando-as na imagem mostrada.
+
+3 c)
+~~~~
+
+Finalmente, pretende-se que o programa seja capaz de perceber se a pessoa está a falar ou não.
+
+Esta classificação deve ser comunicada escrevendo texto na imagem mostrada.
+
+Podem ver um vídeo da aplicação https://youtu.be/eMmuuiV5KGQ[aqui].
