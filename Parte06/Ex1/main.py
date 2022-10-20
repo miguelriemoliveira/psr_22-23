@@ -13,10 +13,11 @@ is_drawing = False
 gui_image = None
 xs = []
 ys = []
+pencil_color = (0,255,0)
 # partial functionality
 
 def mouseCallback(event, x, y, flags, userdata):
-    global is_drawing, gui_image
+    global is_drawing, gui_image, pencil_color
 
     # print('Mouse event at x=' + str(x) + ' y=' + str(y))
 
@@ -60,9 +61,12 @@ def main():
     while True:
         cv2.imshow(window_name, gui_image)
         pressed_key = cv2.waitKey(30)
-        print('pressed_key = ' + str(pressed_key))
 
-        if pressed_key == 99: # that's  j clearing the drawing
+        if pressed_key == -1:
+            pass
+        elif chr(pressed_key) == 'q': # Quite the program
+            exit(0)
+        elif chr(pressed_key) == 'c': # Clear the drawing
             print(Fore.RED + 'You pressed c' + Style.RESET_ALL)
             xs = []
             ys = []
