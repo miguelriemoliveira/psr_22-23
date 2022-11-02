@@ -113,8 +113,7 @@ print ("connecting to %s (%s) with %s" % (local_hostname, local_fqdn, ip_address
 messages = [30, 'Robotics', 31, 14, 'Automation', 18]
 for message in messages:
     print ('Sending message: ' + str(message))
-    message_formated = str(message).encode("utf-8")
-    sock.sendall(message_formated)
+    sock.sendall(message)
     time.sleep(2)  # wait for two seconds
 
 sock.close()  # close connection
@@ -195,10 +194,10 @@ O package deve depender do _rospy_ (aliás, todos os packages que conteham progr
 ============================================
 
 Depois, adapte o http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29[exemplo de publicação / subscrição] de modo
-a que os dois programas possibilitem, com a inserção de argumentos pela linha de comandos, definir o nome to tópico em que irão escrever / ler.
+a que os dois programas possibilitem, com a inserção de argumentos pela linha de comandos, definir o nome do tópico em que irão escrever / ler.
 No caso do programa _publisher.py_, este deve ainda permitir pelo mesmo mecanismo alterar o conteúdo da mensagem que envia periódicamente bem como a frequência de envio.
 
-Usando as novas funcionalidades implementadas. experimente lançar uma constelação de nós para testar a flaxibilidade do sistema de comunicações do ROS.
+Usando as novas funcionalidades implementadas. experimente lançar uma constelação de nós para testar a flexibilidade do sistema de comunicações do ROS.
 Por exemplo, lance um publicador do tópico "conversations" e dois subscritores a este tópico.
 Depois lance um outro publicador do tópico "chat" e apenas um subscritor.
 
@@ -210,7 +209,7 @@ mais facilmente a grande quantidade de programas a lançar.
 
 Utilize o http://wiki.ros.org/rqt_graph[rqt_graph] para visualizar em tempo real o grafo de computação do sistema criado.
 
-Veja vídeo com um https://youtu.be/tzHbJkUsD-c[exemplo].
+Veja este vídeo com um https://youtu.be/tzHbJkUsD-c[exemplo].
 
 Exercício 4 - Serialização e deserialização em ROS
 --------------------------------------------------

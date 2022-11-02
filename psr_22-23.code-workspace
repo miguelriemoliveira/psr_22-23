@@ -5,7 +5,12 @@
 		},
 		{
 			"path": "../psr_solutions"
+		},
+		{
+			"path": "../../../workingcopy/AtlasIV-code"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"cSpell.language": "en,en-US"
+	}
 }
