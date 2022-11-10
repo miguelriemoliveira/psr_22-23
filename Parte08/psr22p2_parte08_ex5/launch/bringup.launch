@@ -1,0 +1,19 @@
+<launch>
+
+  <rosparam command="load" file="$(find psr22p2_parte08_ex5)/params/params.yaml" />
+
+  <node pkg="psr22p2_parte08_ex5" type="publisher_server.py" name="node_bruno" required="True" output="screen">
+    <remap from="~chatter" to="/chatter"/>
+  </node>
+
+  <node pkg="psr22p2_parte08_ex5" type="publisher_server.py" name="node_isabel" required="True" output="screen">
+    <remap from="~chatter" to="/chatter"/>
+  </node>
+
+
+  <node pkg="psr22p2_parte08_ex5" type="subscriber.py" name="sub1" required="True" output="screen"/>
+  <node pkg="psr22p2_parte08_ex5" type="subscriber.py" name="sub2" required="True" output="screen"/>
+  <node pkg="psr22p2_parte08_ex5" type="subscriber.py" name="sub3" required="True" output="screen"/>
+  <node pkg="psr22p2_parte08_ex5" type="subscriber.py" name="sub4" required="True" output="screen"/>
+
+</launch>
