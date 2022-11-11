@@ -1,0 +1,19 @@
+<launch>
+
+  <rosparam command="load" file="$(find psr22p1_parte08_ex5)/params/params.yaml" />
+
+  <!-- Launch the first node -->
+  <node pkg="psr22p1_parte08_ex5" type="publisher_service.py" name="my_node" output="screen"/>
+
+  <node pkg="psr22p1_parte08_ex5" type="publisher_service.py" name="my_node_conversation">
+    <remap from="chatter" to="conversation"/>
+  </node>
+
+
+  <node pkg="psr22p1_parte08_ex5" type="subscriber.py" name="my_subscriber1" output="screen"/>
+
+  <node pkg="psr22p1_parte08_ex5" type="subscriber.py" name="my_subscriber2"/>
+
+
+
+</launch>
