@@ -11,6 +11,25 @@
 		}
 	],
 	"settings": {
-		"cSpell.language": "en,en-US"
+		"cSpell.language": "en,en-US",
+		"python.autoComplete.extraPaths": [
+			"/home/mike/catkin_ws_psr_22-23/devel/lib/python3/dist-packages",
+			"/home/mike/catkin_ws_i_rocs/devel/lib/python3/dist-packages",
+			"/home/mike/catkin_ws_ros_controllers/devel/lib/python3/dist-packages",
+			"/home/mike/catkin_ws_rviz/devel/lib/python3/dist-packages",
+			"/home/mike/catkin_ws/devel/lib/python3/dist-packages",
+			"/opt/ros/noetic/lib/python3/dist-packages",
+			"/home/mike/workingcopy/py3gazebo/pygazebo/msg/v11",
+			"/home/mike/workingcopy/py3gazebo/",
+			"/home/mike/catkin_ws/src/localization_end_to_end/localbot_localization",
+			"/home/mike/catkin_ws/src/localization_end_to_end",
+			"/home/mike/catkin_ws/src/calibration/robots/robotiq_2finger_grippers/robotiq_2f_gripper_control/src/robotiq_2f_gripper_control",
+			"/home/mike/catkin_ws/src/calibration/pypcd/pypcd",
+			"/home/mike/catkin_ws/src/calibration/atom/atom_calibration/src",
+			"/home/mike/catkin_ws/src/calibration/atom/atom_core/src",
+			"/home/mike/workingcopy/OptimizationUtils",
+			"/home/mike/catkin_ws/src/gazebo2rviz",
+			"/home/mike/workingcopy/ColorCorrection"
+		]
 	}
 }
