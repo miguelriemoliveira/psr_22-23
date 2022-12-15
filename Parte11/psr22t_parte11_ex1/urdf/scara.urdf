@@ -1,0 +1,92 @@
+<robot name="test_robot">
+
+    <material name="blue">
+        <color rgba="0 0 0.8 1"/>
+    </material>
+
+    <material name="green">
+        <color rgba="0 0.8 0 1"/>
+    </material>
+
+    <material name="red">
+        <color rgba="0.8 0 0 1"/>
+    </material>
+
+    <material name="yellow">
+        <color rgba="0.8 0.8 0 1"/>
+    </material>
+
+    <link name="base">
+        <visual>
+            <geometry>
+                <cylinder length="0.5" radius="0.3"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+    </link>
+
+    <link name="link1">
+        <visual>
+            <geometry>
+                <box size="1.5 0.6 0.5"/>
+            </geometry>
+            <origin  xyz="0.75 0 0" rpy="0 0 0"/>
+            <material name="green"/>
+        </visual>
+    </link>
+
+    <link name="link2">
+        <visual>
+            <geometry>
+                <box size="1 0.6 0.5"/>
+            </geometry>
+            <origin  xyz="0.5 0 0" rpy="0 0 0"/>
+            <material name="red"/>
+        </visual>
+    </link>
+
+    <link name="link3">
+        <visual>
+            <geometry>
+                <cylinder length="0.5" radius="0.05"/>
+            </geometry>
+            <origin  xyz="0 0 0" rpy="0 0 0"/>
+            <material name="yellow"/>
+        </visual>
+    </link>
+
+
+    <!-- <link name="link2" /> -->
+
+    <joint name="base_to_link1" type="continuous">
+        <parent link="base"/>
+        <child link="link1"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <joint name="link1_to_link2" type="continuous">
+        <parent link="link1"/>
+        <child link="link2"/>
+        <origin xyz="1.5 0 0" rpy="0 0 0" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <joint name="link2_to_link3" type="prismatic">
+        <parent link="link2"/>
+        <child link="link3"/>
+        <origin xyz="1 0 0" rpy="0 0 0" />
+        <axis xyz="0 0 1" />
+        <limit effort="30" velocity="1.0" lower="-1" upper="1" />
+    </joint>
+
+
+
+
+    <!-- <joint name="joint2" type="continuous">
+    <parent link="link1"/>
+    <child link="link3"/>
+    <origin xyz="-2 5 0" rpy="0 0 1.57" />
+  </joint> -->
+
+</robot>

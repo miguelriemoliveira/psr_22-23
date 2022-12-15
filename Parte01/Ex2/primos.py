@@ -4,6 +4,7 @@
 # Imports
 from colorama import Fore, Back, Style
 
+
 # Global variable
 maximum_number = 10
 

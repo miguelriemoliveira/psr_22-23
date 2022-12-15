@@ -1,0 +1,37 @@
+<launch>
+    <!-- <arg name="player_name" default="p_moliveira"/> -->
+
+    <!-- Mercury -->
+    <node name="mercury" pkg="psr22t_parte11_ex1" type="circular_frame.py">
+        <remap from="parent" to="sun"/>
+        <remap from="child" to="mercury"/>
+        <param name="radius" type="double" value="0.387" />
+        <param name="speed" type="double" value="0.0159" />
+    </node>
+
+    <!-- Venus -->
+    <node name="venus" pkg="psr22t_parte11_ex1" type="circular_frame.py">
+        <remap from="parent" to="sun"/>
+        <remap from="child" to="venus"/>
+        <param name="radius" type="double" value="0.723" />
+        <param name="speed" type="double" value="0.0518" />
+    </node>
+
+    <!-- Earth -->
+    <node name="earth" pkg="psr22t_parte11_ex1" type="circular_frame.py">
+        <remap from="parent" to="sun"/>
+        <remap from="child" to="earth"/>
+        <param name="radius" type="double" value="1" />
+        <param name="speed" type="double" value="0.01" />
+    </node>
+
+    <!-- Moon -->
+    <node name="moon" pkg="psr22t_parte11_ex1" type="circular_frame.py">
+        <remap from="parent" to="earth"/>
+        <remap from="child" to="moon"/>
+        <param name="radius" type="double" value="0.0257" />
+        <param name="speed" type="double" value="0.343" />
+    </node>
+
+    
+</launch>
