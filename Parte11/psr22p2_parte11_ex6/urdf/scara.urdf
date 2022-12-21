@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<robot name="scara">
+
+  <material name="yellow">
+    <color rgba="1 1 0 1"/>
+  </material>
+
+  <material name="blue">
+    <color rgba="0 0 0.8 1"/>
+  </material>
+
+  <material name="red">
+    <color rgba="1 0 0 1"/>
+  </material>
+
+  <material name="green">
+    <color rgba="0 1 0 1"/>
+  </material>
+
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <cylinder length="0.3" radius="0.15"/>
+      </geometry>
+      <origin xyz="0 0 0.15" rpy="0 0 0" />
+      <material name="yellow"/>
+    </visual>
+  </link>
+
+  <link name="link1">
+    <visual>
+      <geometry>
+        <box size="1.6 0.2 0.3"/>
+      </geometry>
+      <origin xyz="0.8 0 -0.15" rpy="0 0 0" />
+      <material name="blue"/>
+    </visual>
+  </link>
+
+  <link name="link2">
+    <visual>
+      <geometry>
+        <box size="1 0.2 0.3"/>
+      </geometry>
+      <origin xyz="0.5 0 -0.15" rpy="0 0 0" />
+      <material name="red"/>
+    </visual>
+  </link>
+  
+  <link name="ee_link">
+    <visual>
+      <geometry>
+        <cylinder length="1" radius="0.05"/>
+      </geometry>
+      <origin xyz="-0.5 0 0" rpy="0 1.57 0" />
+      <material name="green"/>
+    </visual>
+  </link>
+
+  <joint name="base_link_to_link1" type="continuous">
+    <parent link="base_link"/>
+    <child link="link1"/>
+    <origin xyz="0 0 0.6" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/> 
+  </joint>
+
+  <joint name="link1_to_link2" type="continuous">
+    <parent link="link1"/>
+    <child link="link2"/>
+    <origin xyz="1.6 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/> 
+  </joint>
+
+  <joint name="link2_to_ee_link" type="prismatic">
+    <parent link="link2"/>
+    <child link="ee_link"/>
+    <origin xyz="1 0 0" rpy="0 1.57 0"/>
+    <axis xyz="1 0 0"/> 
+    <limit effort="30" velocity="1.0" lower="0.1" upper="0.7" />
+  </joint>
+
+
+</robot>
