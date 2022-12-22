@@ -616,6 +616,16 @@ angular:
 Exercício 8 - Utilização do psr_apartment como world
 ---------------------------------------------------
 
+Primeiro deve fazer o clone dos repositórios 
+
+https://github.com/aws-robotics/aws-robomaker-small-house-world
+
+e 
+
+https://github.com/aws-robotics/aws-robomaker-hospital-world
+
+para dentro do catkin workspace.
+
 Utilize o world psr_apartment. Para isso coloque o pacote ros **psr_apartment_description** no seu catkin workspace.
 
 Depois pode indicar o caminho para o ficheiro psr_apartment.world.
