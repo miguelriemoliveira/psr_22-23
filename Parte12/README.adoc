@@ -622,10 +622,8 @@ Primeiro deve fazer o clone dos repositórios https://github.com/aws-robotics/aw
     git clone https://github.com/aws-robotics/aws-robomaker-small-house-world
     git clone https://github.com/aws-robotics/aws-robomaker-hospital-world
 
-Utilize o world psr_apartment. Para isso coloque o pacote ros **psr_apartment_description** no seu catkin workspace.
-
+Utilize o world psr_apartment. Para isso coloque o pacote ros **psr_apartment_description** (está no github de psr) no seu catkin workspace.
 Depois pode indicar o caminho para o ficheiro psr_apartment.world.
-
 
 Exercício 9 - Corrida com comando manual
 ----------------------------------------
