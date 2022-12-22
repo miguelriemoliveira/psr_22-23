@@ -1,0 +1,25 @@
+<launch>
+    <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
+    <arg name="x_pos" default="-5.5"/>
+    <arg name="y_pos" default="-1.0"/>
+    <arg name="z_pos" default="0.0"/>
+
+    <!-- Upload robot description xacro to the ros param -->
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find robutler_description)/urdf/robutler.urdf.xacro" />
+
+    <!-- Spawn the robot in gazebo -->
+    <include file="$(find robutler_bringup)/launch/spawn.launch">
+        <arg name="x_pos" value="$(arg x_pos)"/>
+        <arg name="y_pos" value="$(arg y_pos)"/>
+        <arg name="z_pos" value="$(arg z_pos)"/>
+    </include>
+
+    <!-- Launch robot state publisher to get tf from joint_state -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+    <!-- Launch rviz, loading configuration file -->
+    <node name="rviz" pkg="rviz" type="rviz" args="--display-config $(find robutler_bringup)/config/visualization.rviz" required="false"/>
+
+    <node name="teleop_rqt" pkg="rqt_robot_steering" type="rqt_robot_steering" output="screen"/>
+
+</launch>
