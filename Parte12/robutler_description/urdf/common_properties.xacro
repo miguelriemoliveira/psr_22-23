@@ -18,6 +18,10 @@
     <color rgba="0.0 0.0 0.8 1.0"/>
   </material>
 
+  <material name="turquoise">
+    <color rgba="0 0.808 0.82 1.0"/>
+  </material>
+
   <material name="green">
     <color rgba="0.0 0.8 0.0 1.0"/>
   </material>

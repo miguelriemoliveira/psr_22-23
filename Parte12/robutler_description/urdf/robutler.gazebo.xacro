@@ -5,7 +5,8 @@
   <xacro:arg name="imu_visual"    default="false"/>
 
   <gazebo reference="base_link">
-    <material>Gazebo/DarkGrey</material>
+    <!-- <material>Gazebo/DarkGrey</material> -->
+    <material>Gazebo/Turquoise</material>
   </gazebo>
 
   <gazebo reference="wheel_left_link">

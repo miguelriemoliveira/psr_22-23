@@ -17,7 +17,8 @@
       <geometry>
         <mesh filename="package://turtlebot3_description/meshes/bases/waffle_pi_base.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="light_black"/>
+      <!-- <material name="light_black"/> -->
+      <material name="turquoise"/> 
     </visual>
 
     <collision>
@@ -187,7 +188,7 @@
 
   <joint name="camera_joint" type="fixed">
     <!-- <origin xyz="0.073 -0.011 0.084" rpy="0 0 0"/> -->
-    <origin xyz="0.073 -0.011 0.484" rpy="0 0 0"/>
+    <origin xyz="0.073 -0.011 1" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child link="camera_link"/>
   </joint>

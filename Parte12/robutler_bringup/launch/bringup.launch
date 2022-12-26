@@ -1,7 +1,7 @@
 <launch>
     <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
-    <arg name="x_pos" default="-5.5"/>
-    <arg name="y_pos" default="-1.0"/>
+    <arg name="x_pos" default="-1.5"/>
+    <arg name="y_pos" default="-4.0"/>
     <arg name="z_pos" default="0.0"/>
 
     <!-- Upload robot description xacro to the ros param -->
@@ -20,6 +20,6 @@
     <!-- Launch rviz, loading configuration file -->
     <node name="rviz" pkg="rviz" type="rviz" args="--display-config $(find robutler_bringup)/config/visualization.rviz" required="false"/>
 
-    <node name="teleop_rqt" pkg="rqt_robot_steering" type="rqt_robot_steering" output="screen"/>
+    <node name="rqt_robot_steering" pkg="rqt_robot_steering" type="rqt_robot_steering" args="-t" output="screen"/>
 
 </launch>
