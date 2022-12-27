@@ -13,7 +13,6 @@ Miguel Riem Oliveira <mriem@ua.pt>
 Modelo cinemático diferencial
 Simulação usando o gazebo
 Turtlebot3
-Criação dos packages para o jogo Team Hunt
 -------------------------------------------------------------
 
 [WARN]
