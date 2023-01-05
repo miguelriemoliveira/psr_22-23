@@ -7,7 +7,7 @@
     <arg name="initial_pose_a" default="0.0"/>
 
     <!-- Map server -->
-    <arg name="map_file" default="$(find robutler_navigation_prep)/maps/mriem/mriem_map.yaml"/>
+    <arg name="map_file" default="$(find robutler_navigation)/maps/aula_p2/map.yaml"/>
     <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)">
     </node>
 
@@ -15,7 +15,7 @@
     <node pkg="amcl" type="amcl" name="amcl">
 
         <param name="min_particles" value="500"/>
-        <param name="max_particles" value="3000"/>
+        <param name="max_particles" value="30000"/>
         <param name="kld_err" value="0.02"/>
         <param name="update_min_d" value="0.20"/>
         <!-- <param name="update_min_d" value="0.10"/> -->
