@@ -624,6 +624,8 @@ Primeiro deve fazer o clone dos repositórios https://github.com/aws-robotics/aw
 Utilize o world psr_apartment. Para isso coloque o pacote ros **psr_apartment_description** (está no github de psr) no seu catkin workspace.
 Depois pode indicar o caminho para o ficheiro psr_apartment.world.
 
+No final deve recompilar o seu workspace antes de lançar.
+
 Exercício 9 - Corrida com comando manual
 ----------------------------------------
 
